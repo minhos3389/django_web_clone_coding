@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Web framework for perfectionists with deadlines | Django</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <img src="https://static.djangoproject.com/img/logo-django.42234b631760.svg" alt="Django">
+            </h1>
+            <nav class="nav">
+                <ul class="list">
+                    <!-- (li>a)*8 -->
+                    <li class="list-item"><a href="#">Overview</a></li>
+                    <li class="list-item"><a href="#">Download</a></li>
+                    <li class="list-item"><a href="#">Documentation</a></li>
+                    <li class="list-item"><a href="#">News</a></li>
+                    <li class="list-item"><a href="#">Community</a></li>
+                    <li class="list-item"><a href="#">Code</a></li>
+                    <li class="list-item"><a href="#">About</a></li>
+                    <li class="list-item"><a href="#">♥ Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="hero-section">
+            <div class="container">
+                <p class="intro-desc">Django makes it easier to build better Web
+                    apps more quickly and with less code.
+                </p>
+                <!-- cta 의미 Call to Action:
+                랜딩페이지와 웹사이트에 방문한 사람에게 우리가 원하는 반응을 유도하는 장치. -->
+                <a href="#" class="cta hero-cta">Get started with Django</a>
+            </div>
+        </div>
+        <div class="container-float">              
+            <div class="main-content">
+                <div class="main-intro-content">
+                    <h1 class="main-intro">
+                        Meet Django
+                    </h1>
+                    <p class="intro-content">
+                        Django is a high-level Python Web framework
+                        that encourages rapid development and clean,
+                        pragmatic design. Built by experienced developers,
+                        it takes care of much of the hassle of Web development,
+                        so you can focus on writing your app without needing to reinvent the wheel.
+                        It’s free and open source.
+                    </p>
+                    <dl class="list-features">
+                        <dt>Ridiculously fast.</dt>
+                        <dd>Django was designed to help developers take applications 
+                            from concept to completion as quickly as possible.</dd>
+                        <dt>Reassuringly secure.</dt>
+                        <dd>Django takes security seriously and helps developers avoid many common security mistakes.</dd>
+                        <dt>Exceedingly scalable.</dt>
+                        <dd>Some of the busiest site on the Web leverage Django's ability to quickly and flexibly scale.</dd>
+                    </dl>
+                    
+                </div>
+                <h2 class="main-title">Stay in the loop</h2>
+                <p class="main-desc">Subscribe to one of our mailing lists to stay up to date with 
+                    everything in the Django coummunity.
+                </p>
+                <div class="mailing-layout">
+                    <div class="mailing">
+                        <h3 class="mailing-title">
+                            <a href="#">
+                                Using Django
+                            </a>
+                        </h3>
+                        <p class="mailing-desc">
+                            Get help with Django and follow announcements.
+                        </p>
+                        <form action="#" class="mailing-form">
+                            <label for="input-following">send email for following news</label>
+                            <input 
+                                type="email"
+                                placeholder="Enter email"
+                                id="input-following" 
+                                name="input-following"
+                            />
+                            <button type="submit" class="mailing-form-btn">Submit</button>
+                        </form>
+                        <p class="mailing-desc">
+                            You can also subscribe by sending an email to
+                            <a href="mailto:django-users+subscribe@googlegroups.com">django-users+subscribe@googlegroups.com</a>
+                            and following the instructions that will be sent to you.
+                        </p>
+                    </div>
+                    <div class="mailing">
+                        <h3 class="mailing-title">
+                            <a href="#">
+                                Contributing to Django
+                            </a>
+                        </h3>
+                        <p class="mailing-desc">
+                           Contribute to the development of Django itself.
+                        </p>
+                        <form action="#" class="mailing-form">
+                            <label for="input-following">send email for Contributing to Django</label>
+                            <input 
+                                type="email"
+                                placeholder="Enter email"
+                                id="input-following" 
+                                name="input-following"
+                            />
+                            <button type="submit" class="mailing-form-btn">Submit</button>
+                        </form>
+                        <p class="mailing-desc">
+                            
+                                Before asking a question
+                            about how to contribute, read <br/>
+                            <a href="#">Contributing to Django.</a> Many frequently asked questions are<br/> answered there.<br/>
+                            You can also subscribe by sending an email to 
+                            <a href="mailto:django-users+subscribe@googlegroups.com">django-users+subscribe@googlegroups.com</a>
+                            and following the instructions that will be sent to you.
+                        </p>
+                    </div>
+                </div>
+                <p class="main-comment">We have a few other specialized lists (mentorship, i18n,...), You can find more infromation about them
+                    <a href="#" class="main-comment-link">in our mailing list dcoumentation.</a> </p>
+            </div>
+            <div class="side-content">
+                <div class="container-side-cta">
+                    <a href="#" class="cta side-cta">
+                        Download <em>latest release: 3.1.7</em>
+                    </a>
+                    <a href="#" class="more">
+                        Django documentation
+                    </a>
+                </div>
+                <div class="infos latest-news">
+                    <h2 class="infos-title">Support Django!</h2>
+                    <p class="small-cta">
+                    <img class="small-heart" src="https://static.djangoproject.com/img/fundraising-heart.cd6bb84ffd33.svg" alt="Support Django"/>
+                    <a href="#"> Génies du code donated to the Django Software Foundation to
+                    support Django development. Donate today!</a>
+                    </p>
+                    <h2 class="infos-title">
+                        Latest news 
+                    </h2>
+                    <!-- 독립적인 부분 article 태그 사용. -->
+                    <article class="news-article">
+                        <h3 class="news-title">
+                            <a href="#">
+                                PyCharm & DSF Campaign 2021
+                            </a>
+                        </h3>
+                        <p class="news-title">
+                            30% off any PyCharm Professional licenses with all proceeds benefitting the DSF.
+                        </p>
+                        <p class="news-meta">
+                            Posted by <span>William Vincent</span> on <time datetime="2021-04-01">4월 1, 2021</time>
+                        </p>
+                    </article>
+                    <p class="not-last"></p>
+                    <article class="news-article">
+                        <h3 class="news-title">
+                            <a href="#">
+                                Django 3.2 release candidate 1 released
+                            </a>
+                        </h3>
+                        <p class="news-title">
+                            Django 3.2 release candidate 1, a preview/testing package for the upcoming Django 3.2 release, is available.
+                        </p>
+                        <p class="news-meta">
+                            Posted by <span>Carlton Gibson</span> on <time datetime="2021-03-18">3월 18, 2021</time>
+                        </p>
+                    </article>
+                    <a href="#" class="more">
+                        MORE NEWS 
+                    </a>
+                </div>
+                <div class="infos get-involved">
+                    <h2 class="infos-title">
+                        Get involved
+                    </h2>
+                    <dl class="list-communities">
+                        <dt class="community-title">
+                            #django IRC channel
+                        </dt>
+                        <dd class="community-desc">
+                            Chat with other Django users
+                        </dd>
+                        <dt class="community-title">
+                            Ticket system
+                        </dt>
+                        <dd class="community-desc">
+                            Report bugs and make feature requests
+                        </dd>
+                        <a href="" class="more">
+                            INSIDE THE DJANGO COMMUNITY
+                        </a>
+                    </dl>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="footer">
+        <img src="https://static.djangoproject.com/img/logo-django.42234b631760.svg" alt="Django">
+        <p class="origin"> clone coding by mitku3389 ,original design by threespot and andrevv. </p>
+    </footer>
+</body>
+</html>

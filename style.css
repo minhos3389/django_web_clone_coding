@@ -1,0 +1,406 @@
+/* 모든 요소 (일반요소와 가상요소들 박스 속성을 border-box로 설정. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body{
+    min-width: 1060px;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    /* Roboto가 없으면 Avenir, 없으면 sans-serif계 글꼴 사용. */
+    /* 구글폰트에서 Roboto를 선택. */
+    font-family: Roboto, Avenir, sans-serif;
+}
+a {
+    /* 전체 a요소의 밑줄 제거 */
+    text-decoration: none;
+}
+/* HEADER */
+.header {
+    background: #0c4b33;
+    height: 72px;
+    padding: 15px 0 4px;
+}
+
+.container,
+.container-float {
+    max-width:1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* normal flow에서 벗어나는 것이 아니므로 주더라도 위치가 변하지 않는다. */
+    position: relative;
+}
+/* container-float 요소의 안에 위치하는 main 및 side 콘텐트가 float속성을 지녀서
+container-float 영역이 자식요소를 인지하지 못하는 결과를 보여, container-float::after
+가상요소를 사용하여 clear: both;를 수행해 자식요소를 포함시켜준다.
+자식의 높이를 온전히 가지게 된다. */
+
+.container-float::after{
+/* container-float요소의 다음 부분에 위치하게 된다. */
+    display: block;
+    content:'';
+    clear: both;
+}
+.logo {
+    margin: 0;
+    /* position: absolute 가 자식요소로 들어가게 되면 padding을 잘 못 읽는 경우가 생기는데 
+    이를 방지하기 위해서 padding-left: inherit으로 부모요소인 container영역의 20px 패딩을 상속. */
+    padding-left: inherit;
+    /* 위치 고정. */
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.nav {
+    text-align: right;
+}
+.list {
+    margin: 0;
+    /* nav li요소간의 간격을 없애기 위해 ul태그의 list클래스의 font-size속성을 0으로 지정. */
+    font-size: 0;
+}
+
+.list-item {
+    display: inline-block;
+    /* ul의 li클래스 font-size를 0으로 만든 후, li클래스인 list-item속성의
+    font-size를 1.3rem으로 설정해 줬다. */
+    font-size: 1.3rem;
+}
+/* .list-item a로 적어도 list-item 클래스 밑의 a요소를 선택하고
+.list-item > a 하게되면 list-item 클래스의 바로 밑의 a 요소를 선택하게 된다. */
+.list-item a {
+    color: white;
+    display: block;
+    /* 글씨만 있으면 선택어려우므로 넉넉하게 여백을 준다. */
+    padding: 10px;
+    /* 대문자로 변경. */
+    text-transform: uppercase;
+}
+
+.list-item > a:hover {
+    color: #c9f0dd;
+}
+
+
+/* MAIN */
+.hero-section {
+    /* 가운데 정렬. */
+    text-align: center;
+    padding: 50px 0;
+    /* 아래에 선을 solid 직선 형태로 크림색 색상 지정. */
+    border-bottom: 1px solid #cfe3dc;
+}
+.intro-desc {
+    margin: 40px auto 50px;
+    /* 글자 배열위해 적절한 너비 지시. */
+    width: 700px;
+    font-weight: 300;
+    font-size: 3.6rem;
+    line-height: 1.3;
+}
+/* CTA */
+.cta {
+    color: white;
+    display: block;
+    width: 300px;
+    font-weight: 400;   
+    border-radius: 8px;
+    background: #44b78b;
+}
+.cta:hover{
+    background: #51be95;
+}
+.hero-cta {
+    width: 300px;
+    padding: 20px 50px;
+    margin: 0 auto 60px;
+    font-weight: 800;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    float: left;
+    width: 70%;
+    padding: 0px 56px 80px 0px;
+}
+.main-intro-content{
+    font-family: Palationo, Palatino Linotype;
+    font-weight: 400;
+    line-height: 29px;
+    font-size: 18px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #CFE3DC;
+}
+
+.main-intro {
+    font-family: Roboto;
+    font-size: 3.2rem;
+    margin: 40px 0px 30px;
+    color: #0C3C26;
+    font-weight: 400;
+    line-height: 35px;
+}
+.intro-content {
+    width: 868px;
+    padding-bottom: 20px;
+}
+
+.list-features > dt {
+    padding: 0px 60px 20px 110px;
+    color: #0c3c26;
+    line-height: 29px;
+    font-size: 18px;
+    margin-left : 40px;
+}
+
+.list-features >  dd {
+    padding: 0px 60px 20px 110px;
+    color: #0c3c26;
+    line-height: 29px;
+    font-size: 18px;
+}
+
+
+.main-title {
+    font-weight: 400;
+    margin: 40px 0 20px 0;
+    font-size: 3.2rem;
+    /* 작안에 대한 설정 
+    글자길이 양수값 적을시 늘어나고 , 음수값 적을시 줄어든다.*/
+    letter-spacing: -1px;
+}
+
+.main-desc {
+    margin: 0 0 20px 0;
+}
+
+
+.mailing-layout {
+    padding-top: 20px;
+}
+.mailing {
+    float: left;
+    /* 가로 길이가 100% 넘으면 넘치기 때문에 48%로 설정. */
+    width: 48%;
+}
+/* :하나만 콜론 찍게되면 가상클래스 */
+/* 첫번째 클래스 */
+.mailing:first-child {
+    /* 우측 margin 4% 주고 .mailing 가로너비 50% -> 48%로 수정. */
+    margin-right: 4%;
+}
+.mailing-layout::after {
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.mailing-title {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.mailing-title > a {
+    color: #20aa76;
+}
+.mailing-title > a:hover {
+    color: #25c488;
+}
+
+.mailing-desc {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+.mailing-form {
+    margin: 10px 0 30px;
+    position: relative;
+}
+.mailing-form > label {
+    /* display: none; */
+    /* visibility: hidden; 과 같이 단순하게 실행 가능.*/
+    /* 보조기기를 사용하는 분들을 위해 웹 접근성을 고려할 경우 */
+    /* 최대한 크기를 줄여보자. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    /* 해당한 크기의 넘치는 내용물들은 숨겨진다. (약간은 폼 안에 남겨지므로
+    margin: -1px;  clip: rect(0,0,0,0)으로 상하 좌우 잘라준다.*/
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0,0,0,0)
+}
+
+/* 속성 선택자 사용 */
+input[type="email"] {
+    width: 100%;
+    border: 1px solid #cfe3dc;
+    border-radius: 4px;
+    height: 5rem;
+    padding: 6px 80px 8px 10px;
+}
+.mailing-form-btn {
+    position: absolute;
+    top: 30%;
+    right: 1rem;
+    border: 0;
+    background: transparent;
+    color: #44b78b;
+    cursor: pointer;
+}
+
+.main-comment {
+    font-family: "Palatino Linotype";
+    color: #0c3c26;
+    padding: 15px 0;
+}
+.main-comment-link {
+    color: #0c3c26;
+    text-decoration: underline;
+
+}
+.main-comment-link:hover {
+    color: #1d915c;
+}
+
+/* SIDE CONTENT */
+
+.side-content {
+    float: right;
+    width: 30%;
+    margin: 0;
+    padding: 0 0 30px 50px;
+    border-left: 1px solid #cfe3dc;
+}
+
+.side-content a:hover {
+    color: #25c488;
+}
+.container-side-cta {
+    text-align: center;
+}
+/* 두 개의 클래스를 적어 선택자 점수를 높여 구체성 점수가 (0,2,1)인 초록색으로 덮이지 않도록 수행. */
+.cta.side-cta:hover {
+    color: white;
+}
+.side-cta {
+    width: 330px;
+    padding: 16px 24px;
+    margin: 40px auto 0;
+    font-weight: 500;
+}
+.side-cta em {
+    color: #C9F0DD;
+    font-style: normal;
+}
+
+.small-cta > a {
+    float: right;
+    text-decoration: none;
+    color: #25c488;
+    font-size: 14px;
+    line-height: 22px;
+    width: 244px;
+    height: 66px;
+}
+
+.small-heart {
+    width: 64px;
+    height: 54.844;
+}
+.more {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #20aa76;
+}
+.more::after {
+    content: ' >';
+}
+.infos {
+    margin-bottom: 40px;
+}
+
+.infos-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-bottom: 1px solid #cfe3dc;
+    margin: 3.5rem 0 0 0;
+    padding-bottom: 1rem;
+}
+
+.news-title {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.news-title:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.news-title > a,
+.community-title > a {
+    color: #20aa76;
+}
+
+.news-article {
+    padding: 20px 0;
+}
+.not-last{
+    border-bottom: 1px solid #cfe3dc;
+}
+.news-desc {
+    font-size: 1.5rem;
+}
+.news-meta {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #859d94;
+}
+.news-meta > span {
+    font-weight: 700;
+}
+/* dl 요소 */
+.list-communities {
+    padding: 20px 0;
+    margin: 0;
+}
+.community-title {
+    font-size:  1.4rem;
+    color:#20aa76;
+}
+/* 가상요소 두번째 이후부터 적용 
+nthmaster.com 참고 할 것.*/
+.community-title:nth-child(n+2) {
+    margin-top: 10px;
+}
+.community-desc {
+    font-size: 1.4rem;
+    color: #859d94;
+    margin: 10px 0 0 0;
+}
+
+
+
+/* CONTENT-INFO */
+
+.footer {
+    background: #0c4b33;
+    /* 메인콘텐트와 사이드콘텐트의 float 속성 때문에 영향을 받고 있는 
+    푸터 영역에 clear: both;를 하여 영향을 배제하여 독리적으로 존재하게 한다. */
+    clear: both;
+}
+.origin {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    color: #f1fff7;
+}
